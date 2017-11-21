@@ -1,6 +1,6 @@
 export function selectBook(book){
     return{
-      type: 'BOOK-SELECTED',
+      type: 'BOOK_SELECTED',
       payload: book
     };
 }
