@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { selectBook } from '../actions/index';
+import { selectCelebrity } from '../actions/index';
 import { bindActionCreators } from 'redux';
 import styled from 'styled-components';
 
@@ -35,17 +35,17 @@ const Image = styled.img`
   height: 240px;
 `
 
-class BookList extends Component {
+class CelebrityList extends Component {
   renderList() {
 
-    return this.props.books.map((book) => {
+    return this.props.celebrities.map((celebrity) => {
       return(
         <Li
-          key={book.name}
-          onClick={() => this.props.selectBook(book)}
+          key={celebrity.name}
+          onClick={() => this.props.selectCelebrity(celebrity)}
           >
 
-          {book.name}
+          {celebrity.name}
 
         </Li>
       );
@@ -66,12 +66,12 @@ class BookList extends Component {
 
 function mapStateToProps(state) {
   return{
-    books: state.books
+    celebrities: state.celebrities
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ selectBook: selectBook }, dispatch);
+  return bindActionCreators({ selectCelebrity: selectCelebrity }, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(BookList);
+export default connect(mapStateToProps, mapDispatchToProps)(CelebrityList);

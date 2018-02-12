@@ -1,6 +1,6 @@
-export function selectBook(book){
+export function selectCelebrity(celebrity){
     return{
-      type: 'BOOK_SELECTED',
-      payload: book
+      type: 'CELEBRITY_SELECTED',
+      payload: celebrity
     };
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Component } from 'react';
 
-import BookList from '../containers/book-list';
-import BookDetail from '../containers/book-detail';
+import CelebrityList from '../containers/celebrity-list';
+import CelebrityDetail from '../containers/celebrity-detail';
 import styled, { injectGlobal } from 'styled-components';
 
 injectGlobal`
@@ -36,8 +36,8 @@ export default class App extends Component {
           <h3>Biography!</h3>
         </ExtIdiv>
         <br />
-        <BookList />
-        <BookDetail />
+        <CelebrityList />
+        <CelebrityDetail />
       </div>
     );
   }

@@ -16,19 +16,19 @@ const Rdiv = styled.div`
   float: right;
 `
 
-class BookDetail extends Component {
+class CelebrityDetail extends Component {
     render() {
-      if (!this.props.book) {
+      if (!this.props.celebrity) {
         return <Bdiv> Select a Celebrity! </Bdiv>;
       }
 
       return (
         <Rdiv>
-          <h3><b>{this.props.book.name}</b> </h3>
-          <div><b>Age:</b>{this.props.book.Age} </div>
-          <div> <b>BirthDay:</b> {this.props.book.birthday} </div>
-          <div> <b>Personal Life:</b> {this.props.book.plife} </div>
-          <div> <b>Reference:</b> {this.props.book.reference} </div>
+          <h3><b>{this.props.celebrity.name}</b> </h3>
+          <div><b>Age:</b>{this.props.celebrity.Age} </div>
+          <div> <b>BirthDay:</b> {this.props.celebrity.birthday} </div>
+          <div> <b>Personal Life:</b> {this.props.celebrity.plife} </div>
+          <div> <b>Reference:</b> {this.props.celebrity.reference} </div>
         </Rdiv>
         
       );
@@ -37,8 +37,8 @@ class BookDetail extends Component {
 
 function mapStateToProps(state) {
   return{
-      book: state.activeBook
+      celebrity: state.activeCelebrity
   };
 }
 
-export default connect(mapStateToProps)(BookDetail);
+export default connect(mapStateToProps)(CelebrityDetail);
